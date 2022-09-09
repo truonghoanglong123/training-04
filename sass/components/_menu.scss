@@ -1,0 +1,18 @@
+.menu{
+
+    &__ul{
+        display: flex;
+        align-items: center;
+        &--li{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction: column;
+            align-content: center;
+            &:last-child{
+                display: flex;
+                flex-direction:row;
+            }
+        }
+    }
+}

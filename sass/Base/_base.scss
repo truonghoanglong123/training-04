@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch; //
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    @include respond(pc){
+        font-size: calc(100vw/120);
+    }
+}
+body{
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+html,body{
+    overflow-x: hidden;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    @include respond(mobile){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.show-pc{
+    display: block;
+    @include respond(mobile){
+        display: none;
+    }
+}
+.show-sp{
+    display: none;
+    @include respond(mobile){
+        display: block;
+    }
+}
+.show{
+    display: block
+}
+.hide{
+    display: none
+}
