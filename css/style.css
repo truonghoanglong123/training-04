@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -62,9 +63,10 @@ html {
       font-size: calc(100vw/120); } }
 
 body {
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
-  line-height: 1.6;
-  font-size: 1.5rem; }
+  font-family: 'Marcellus', serif;
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.8;
+  font-size: 1.4rem; }
 
 html, body {
   overflow-x: hidden; }
@@ -77,6 +79,11 @@ html, body {
     .container {
       padding-left: 15px;
       padding-right: 15px; } }
+
+.container-slightly {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; }
 
 .show-pc {
   display: block; }
@@ -97,7 +104,25 @@ html, body {
   display: none; }
 
 .section-menu {
-  background-color: #eaf1f4;
+  background-color: #eaf1f4; }
+
+.section-headquarter {
+  background: linear-gradient(to bottom, #5d8fa1 25%, #eaf1f4 25%);
+  padding-top: 5rem; }
+
+.section-topic {
+  padding: 8rem 0;
+  background: #dae4e9; }
+
+.section-branches {
+  padding: 8rem 0;
+  background: #eaf1f4; }
+
+.section-booking {
+  background: linear-gradient(to bottom, #ffffff 68%, #5d8fa1 68%);
+  padding: 8rem 0 0 0; }
+
+.menu-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -107,10 +132,15 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .menu__logo h1 {
+  .menu__logo--img {
+    margin-right: 2rem; }
+  .menu__logo--h1 {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    font-size: 1.2rem;
+    height: 100%;
+    width: 100%; }
 
 .menu__ul {
   display: flex;
@@ -120,7 +150,285 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    align-content: center; }
+    align-content: center;
+    margin-right: 7rem;
+    cursor: pointer;
+    transition: all .5s; }
+    .menu__ul--li:hover h4 {
+      color: #00cc99;
+      transition: all .5s; }
     .menu__ul--li:last-child {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      margin-right: 0; }
+      .menu__ul--li:last-child a {
+        margin-right: 3rem; }
+        .menu__ul--li:last-child a:last-child {
+          margin-right: 0; }
+    .menu__ul--li h2 {
+      font-size: 1.7rem;
+      color: #000000;
+      letter-spacing: 0.05em; }
+    .menu__ul--li p {
+      font-size: 1.1rem;
+      color: #838383; }
+
+.menu-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8.5rem 0 5.5rem 0; }
+  .menu-center__h2 {
+    font-size: 12rem;
+    font-style: italic;
+    color: #dde6e9; }
+  .menu-center__h3 {
+    font-size: 2.8rem;
+    margin-top: -5rem;
+    color: #333333; }
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 3rem;
+  padding-bottom: 2rem; }
+  .page p,
+  .page div {
+    margin-right: 1.5rem; }
+
+.hea-intro {
+  background-color: #ffffff;
+  padding: 7.5rem 10rem 8rem 10rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .hea-intro__title {
+    color: #5d8fa1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.4rem;
+    padding-bottom: 2rem;
+    position: relative;
+    margin-bottom: 5rem; }
+    .hea-intro__title::after {
+      content: "";
+      width: 50px;
+      height: 1px;
+      bottom: 1rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      background-color: #5d8fa1; }
+  .hea-intro__content--address {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-bottom: 2rem; }
+  .hea-intro__content--phone {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-bottom: 2rem; }
+  .hea-intro__content--hours {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-bottom: 2rem; }
+  .hea-intro__content--holiday {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-bottom: 2rem; }
+  .hea-intro__img--big {
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative; }
+    .hea-intro__img--big img {
+      vertical-align: top;
+      width: 100%; }
+    .hea-intro__img--big::after {
+      content: "２５文字程度落ち着くダミーテキストダミーテキストダ";
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      width: 100%;
+      height: 5rem;
+      bottom: 0;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-color: black;
+      opacity: 0.5;
+      padding-left: 2rem; }
+  .hea-intro__img--small {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .hea-intro__img--small img {
+      width: calc( (100% - 24px ) /4);
+      vertical-align: top; }
+
+.acupuncture {
+  padding: 10rem 10rem 8rem 10rem; }
+  .acupuncture__title {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem; }
+  .acupuncture__p {
+    font-size: 1.4rem;
+    margin-bottom: 4rem; }
+  .acupuncture__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .acupuncture__btn--child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 330px;
+      height: 70px;
+      background-color: #00cc99;
+      color: white;
+      border-radius: 4px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.topic-title {
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6595a6;
+  margin-bottom: 5rem; }
+
+.topic-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .topic-content__img {
+    margin-right: 5rem; }
+    .topic-content__img img {
+      vertical-align: top; }
+  .topic-content__text--title {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem; }
+
+.branches__title {
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5d8fa1;
+  margin-bottom: 5rem; }
+
+.branches__ifam {
+  width: 100%;
+  margin-bottom: 4rem; }
+  .branches__ifam iframe {
+    width: 100%; }
+
+.branches__address {
+  display: flex;
+  align-items: center; }
+  .branches__address--img {
+    margin-right: 3rem; }
+  .branches__address--content {
+    font-size: 1.4rem; }
+
+.booking__head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem; }
+
+.booking__head2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  margin-bottom: 4rem; }
+  .booking__head2::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: black;
+    margin-left: 1rem; }
+  .booking__head2::before {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: black;
+    margin-right: 1rem; }
+
+.booking__note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #717171;
+  margin-bottom: 5.5rem; }
+
+.booking__booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 4rem; }
+  .booking__booking--online--h4 {
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem; }
+  .booking__booking--online--div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    .booking__booking--online--div p {
+      width: 330px;
+      height: 70px;
+      background-color: #00cc99;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      color: white; }
+  .booking__booking--phone--h4 {
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem; }
+  .booking__booking--phone--hours {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .booking__booking--phone--hours img {
+      margin-right: 1rem; }
+    .booking__booking--phone--hours p {
+      font-size: 4.6rem;
+      color: #00cc99; }
+  .booking__booking--phone--worktime {
+    font-size: 1.4rem; }
+
+.booking__img {
+  display: flex;
+  padding-bottom: 10rem; }
+  .booking__img img {
+    display: flex;
+    width: calc( 100% / 3);
+    vertical-align: bottom; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 3rem; }
+  .footer__left {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .footer__left--img {
+      margin-right: 4rem; }
+    .footer__left p {
+      color: white; }
+  .footer__right {
+    color: white; }

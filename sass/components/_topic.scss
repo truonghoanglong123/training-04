@@ -1,0 +1,27 @@
+.topic-title{
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-topic;
+    margin-bottom: 5rem;
+}
+
+.topic-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__img{
+        margin-right: 5rem;
+        & img{
+            vertical-align: top;
+        }
+    }
+    &__text{
+
+        &--title{
+            font-size: 1.6rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+}

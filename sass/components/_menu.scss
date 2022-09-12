@@ -1,11 +1,23 @@
+.menu-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 5rem 3rem 4rem;
+}
 .menu__logo{
     display: flex;
     align-items: center;
     justify-content: center;
-    & h1{
+    &--img{
+        margin-right: 2rem;
+    }
+    &--h1{
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1.2rem;
+        height: 100%;
+        width: 100%;
     }
 }
 .menu{
@@ -18,10 +30,62 @@
             align-items:center;
             flex-direction: column;
             align-content: center;
+            margin-right: 7rem;
+            cursor: pointer;
+            transition: all .5s;
+            &:hover h4{
+                color: $color-green;
+                transition: all .5s;
+            }
             &:last-child{
                 display: flex;
                 flex-direction:row;
+                margin-right: 0;
+                & a{
+                    margin-right: 3rem;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+            & h2{
+                font-size: 1.7rem;
+                color: $color-black;
+                letter-spacing: 0.05em;
+            }
+            & p{
+                font-size: 1.1rem;
+                color: $color-light-back;
             }
         }
+    }
+}
+
+.menu-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8.5rem 0 5.5rem 0;
+    &__h2{
+        font-size: 12rem;
+        font-style: italic;
+        color: $color-menu-big;
+    }
+    &__h3{
+        font-size: 2.8rem;
+        margin-top: -5rem;
+        color: $color-menu-small;
+    }
+}
+.page{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 3rem;
+    padding-bottom: 2rem;
+    & p,
+    & div{
+        margin-right: 1.5rem;
     }
 }

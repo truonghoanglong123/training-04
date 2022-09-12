@@ -1,0 +1,28 @@
+.branches__title{
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5d8fa1 ;
+    margin-bottom: 5rem;
+}
+
+.branches__ifam{
+    width: 100%;
+    & iframe{
+        width: 100%;
+    }
+    margin-bottom: 4rem;
+}
+
+.branches__address{
+    display: flex;
+    align-items: center;
+    &--img{
+        margin-right: 3rem;
+    }
+
+    &--content{
+        font-size: 1.4rem;
+    }
+}

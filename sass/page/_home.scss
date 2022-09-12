@@ -1,7 +1,20 @@
 .section-menu{
     background-color: #eaf1f4; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 5rem 3rem 4rem;
+}
+.section-headquarter{
+    background: linear-gradient(to bottom, #5d8fa1 25% , #eaf1f4 25%);
+    padding-top: 5rem;
+}
+.section-topic{
+    padding: 8rem 0;
+    background: $bg-topic;
+}
+.section-branches{
+    padding: 8rem 0;
+    background: $bg-menu;
+}
+
+.section-booking{
+    background: linear-gradient(to bottom, #ffffff 68% , #5d8fa1 68%);
+    padding: 8rem 0 0 0;
 }
